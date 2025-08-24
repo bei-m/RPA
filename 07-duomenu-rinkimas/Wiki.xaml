@@ -1,0 +1,322 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Wiki" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="rezultatas" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="info2" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1139.2,3103.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Wiki_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Wiki" sap:VirtualizedContainerService.HintSize="688,3038.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="uniqueAtlikejas" />
+      <Variable x:TypeArguments="x:String" Name="atlikejai" />
+      <Variable x:TypeArguments="x:String" Name="tikras_vardas" />
+      <Variable x:TypeArguments="x:String" Name="zanras" />
+      <Variable x:TypeArguments="x:String" Name="metai" />
+      <Variable x:TypeArguments="x:String" Name="kompanija" />
+      <Variable x:TypeArguments="s:String[]" Name="eilute" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ExtractTableData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="FilteredData" />
+      <Variable x:TypeArguments="x:String" Name="zanras2" />
+      <Variable x:TypeArguments="x:String" Name="kompanija2" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[rezultatas]" DisplayName="Sukuriama duomenų lentelė rezultatui saugoti" sap:VirtualizedContainerService.HintSize="625.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Atlikėjas&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Atlikėjo_x0020_tikras_x0020_vardas&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Kuriamos_x0020_muzikos_x0020_žanras&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Aktyvūs_x0020_metai&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Įrašų_x0020_kompanijos_x0020_pavadinimas&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Assign sap2010:Annotation.AnnotationText="Sukuriama nauja lentelė, kurioje saugomi tik atlikėjų vardai be pasikartojimų." DisplayName="Unikalūs atlikėjai" sap:VirtualizedContainerService.HintSize="625.6,156.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[uniqueAtlikejas]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[info2.DefaultView.ToTable(True, "Atlikėjas")]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Vykdomas ciklas tiek kartų, kiek yra atlikėjų" CurrentIndex="{x:Null}" DataTable="[uniqueAtlikejas]" DisplayName="Kiekvienam atlikėjui vykdomi veiksmai" sap:VirtualizedContainerService.HintSize="625.6,2700.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Atlikejas" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Veiksmai" sap:VirtualizedContainerService.HintSize="592,2480.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Parenkamas apdorojamas atlikėjas" sap:VirtualizedContainerService.HintSize="529.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[atlikejai]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Atlikejas("Atlikėjas").ToString()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Atidaromas Wikipedia puslapis" sap:VirtualizedContainerService.HintSize="529.6,2280.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="d2b8e430-7112-4a30-976a-545b888a2cf4" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Wikipedijos tinklapyje atliekami veiksmai" sap:VirtualizedContainerService.HintSize="496,2040.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Įvedamas atlikėjo vardas " EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d2b8e430-7112-4a30-976a-545b888a2cf4" SecureText="{x:Null}" Text="[atlikejai]" Timeout="{x:Null}" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.wikipedia.org/" CVScreenId="22c9ae1c-7a1c-4055-8c90-91102d0c90fb" CvElementArea="286, 653, 394, 45" CvType="InputBox" DesignTimeRectangle="286, 653, 395, 44" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='searchInput' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchInput' tag='INPUT' type='search' class='' aaname='Search Wikipedia' /&gt;" Guid="b77b8018-7396-425c-8f7d-c9d13a31113a" InformativeScreenshot="253ed338fd0699a82c83643fb005601b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wikipedia' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="0cc9ac19-aa2e-4116-82eb-87e3dc5469f5" CvElementArea="680, 653, 58, 44" CvType="Button" DesignTimeRectangle="698, 665, 22, 22" FullSelectorArgument="&lt;webctrl parentid='search-form' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='search-form' tag='I' type='' class='sprite svg-search-icon' aaname='Search' check:innerText='Search' /&gt;" Guid="c8feb3d9-6510-42b6-b8c4-489a47bb727b" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Spaudžiamas paieškos mygtukas" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="d2b8e430-7112-4a30-976a-545b888a2cf4" Timeout="{x:Null}" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.wikipedia.org/" CVScreenId="66a4ee30-cce8-4d30-b760-cba55a6d52e6" CvElementArea="680, 653, 58, 44" CvType="Button" DesignTimeRectangle="698, 665, 22, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='search-form' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='search-form' tag='I' type='' class='sprite svg-search-icon' aaname='Search' check:innerText='Search' /&gt;" Guid="0a546fad-ae5c-4372-acf6-bd2b879faedd" InformativeScreenshot="706f7219d9bbfca7e8f4709890e571d7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wikipedia' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="66a4ee30-cce8-4d30-b760-cba55a6d52e6" CvElementArea="680, 653, 58, 44" CvType="Button" DesignTimeRectangle="681, 653, 56, 44" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='pure-button pure-button-primary-progressive' aaname=' Search ' check:innerText='Search' /&gt;" Guid="36ac22cb-c0bb-4140-9a96-919eafaccc3e" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" sap2010:Annotation.AnnotationText="Puslapis paslenkamas žemyn, tam, kad matytusi nuskaitoma informacija" ClickBeforeMode="None" ContinueOnError="False" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayBetweenShortcuts="{x:Null}" DisplayName="Puslapis paslenkamas žemyn" sap:VirtualizedContainerService.HintSize="433.6,311.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d2b8e430-7112-4a30-976a-545b888a2cf4" Shortcuts="[d(hk)][k(pgdn)][u(hk)]" ShortcutsArgument="{x:Null}" Timeout="45" Version="V3">
+                      <uix:NKeyboardShortcuts.Target>
+                        <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Rihanna" DesignTimeRectangle="199, 179, 150, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9; &amp;#x9;' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9; &amp;#x9;' tag='SPAN' type='' class='mw-logo-container skin-invert' /&gt;" Guid="23e0639d-7c63-4a91-af62-2c1b95801a22" InformativeScreenshot="2c3ac2207e2033b477312bc9d79e8caa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rihanna - Wikipedia' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
+                      </uix:NKeyboardShortcuts.Target>
+                      <uix:NKeyboardShortcuts.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="Label 'Labels'" Mode="Appears" Retry="False" Timeout="60">
+                          <uix:VerifyExecutionOptions.Target>
+                            <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Rihanna" CVScreenId="77d1e55d-6bfa-4521-97e5-a5a908e2fa1d" CvTextArea="1266, 895, 50, 15" CvTextArgument="Labels" CvType="Text" DesignTimeRectangle="1267, 891, 109, 48" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='14' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='infobox-label' aaname='Labels' check:innerText='Labels' /&gt;" Guid="b44e4509-6f5e-4331-a53b-859624d588a5" InformativeScreenshot="e739317cd112ce4444a26654ab290d35.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rihanna - Wikipedia' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                          </uix:VerifyExecutionOptions.Target>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NKeyboardShortcuts.VerifyOptions>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nuskaitomas atlikėjo tikras vardas" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d2b8e430-7112-4a30-976a-545b888a2cf4" ScrapingOptions="{x:Null}" TextString="[tikras_vardas]" Timeout="{x:Null}" Version="V3" WordsInfo="{x:Null}">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Lady_Gaga" DesignTimeRectangle="812, 290, 120, 29" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='nickname' /&gt;" Guid="67890ac7-9f16-4b5d-98bf-302826c5d4b0" InformativeScreenshot="d688bd500f0a7a3978fc70c317b8a0aa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lady Gaga - Wikipedia' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="3e0a495a-3cd3-4187-ad5a-c1bda7f8e7ee" CvTextArea="737, 290, 27, 11" CvTextArgument="Born" CvType="Text" DesignTimeRectangle="737, 287, 72, 69" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='infobox-label' aaname='Born' check:innerText='Born' /&gt;" Guid="fea1c53c-2f3b-4f40-bee9-bd3803ebf695" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nuskaitomi atlikėjo aktyvūs metai" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_3" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d2b8e430-7112-4a30-976a-545b888a2cf4" ScrapingOptions="{x:Null}" TextString="[metai]" Timeout="{x:Null}" Version="V3" WordsInfo="{x:Null}">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Kendrick_Lamar" CVScreenId="efd6ee69-42fb-4a58-ae4d-ac7eb03714b2" CvTextArea="807, 319, 71, 13" CvType="AnyWordGroup" DesignTimeRectangle="808, 316, 162, 19" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='infobox-data' /&gt;" Guid="aa89ab1c-f763-4ed8-961f-b57fe1f8f4d1" InformativeScreenshot="94d9113d646740c17ff2956163235c6b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Kendrick Lamar - Wikipedia' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="efd6ee69-42fb-4a58-ae4d-ac7eb03714b2" CvTextArea="736, 319, 66, 11" CvTextArgument="Years active" CvType="Text" DesignTimeRectangle="737, 316, 69, 19" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='infobox-label' aaname='Years active' check:innerText='Years active' /&gt;" Guid="c39c79db-4957-41c1-982a-1da0b0b940af" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nuskaitomas atlikėjo muzikos žanras" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d2b8e430-7112-4a30-976a-545b888a2cf4" ScrapingOptions="{x:Null}" TextString="[zanras]" Timeout="{x:Null}" Version="V3" WordsInfo="{x:Null}">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Kendrick_Lamar" CVScreenId="efd6ee69-42fb-4a58-ae4d-ac7eb03714b2" CvTextArea="808, 516, 98, 13" CvType="AnyWordGroup" DesignTimeRectangle="808, 516, 98, 13" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='15' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LI' class='' aaname='' /&gt;" Guid="f7832f00-2c21-4c30-a120-09984ae897ff" InformativeScreenshot="65f7224ec74ce56243cc21f75224a32b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Kendrick Lamar - Wikipedia' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="efd6ee69-42fb-4a58-ae4d-ac7eb03714b2" CvTextArea="736, 516, 40, 11" CvTextArgument="Genres" CvType="Text" DesignTimeRectangle="737, 513, 69, 51" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='15' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='infobox-label' aaname='Genres' check:innerText='Genres' /&gt;" Guid="cdce8cea-a9be-495a-aaf2-92812e3b9aa1" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nuskaitomas atlikėjo įrašų kompanijos pavadinimas" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_4" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="d2b8e430-7112-4a30-976a-545b888a2cf4" ScrapingOptions="{x:Null}" TextString="[kompanija]" Timeout="{x:Null}" Version="V3" WordsInfo="{x:Null}">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Lady_Gaga" CVScreenId="8f741bdd-b430-498c-9d30-1a2762448c63" CvTextArea="812, 574, 49, 11" CvType="AnyWordGroup" DesignTimeRectangle="812, 574, 51, 12" DesignTimeScaleFactor="0.8999999761581421" ElementType="ListItem" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='12' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LI' class='' aaname='' /&gt;" Guid="a2b25cae-0d62-4c9a-a2e3-560512463fed" InformativeScreenshot="aca6338330c1278bcd65fe4677b0da31.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lady Gaga - Wikipedia' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="8f741bdd-b430-498c-9d30-1a2762448c63" CvTextArea="737, 574, 36, 11" CvTextArgument="Labels" CvType="Text" DesignTimeRectangle="737, 571, 72, 35" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='12' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='infobox-label' aaname='Labels' check:innerText='Labels' /&gt;" Guid="d8e96aa7-0601-428b-b084-9b19686898cf" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <Assign sap2010:Annotation.AnnotationText="Sukuriamas naujas masyvas, kuris veiks kaip rezultatų duomenų lentelės eilutė, į kurį įrašomos prieš tai nuskaitytos reikšmės" DisplayName="Suformuojama duomenų eilutė" sap:VirtualizedContainerService.HintSize="433.6,158.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="s:String[]">[eilute]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="s:String[]">[{atlikejai, tikras_vardas, zanras, metai, kompanija}]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:AddDataRow ArrayRow="[eilute]" DataRow="{x:Null}" DataTable="[rezultatas]" DisplayName="Eilutė įrašoma į rezultatų duomenų lentelę" sap:VirtualizedContainerService.HintSize="433.6,212.8" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1040, 736" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADmSURBVDhPpZMBDYQwDEWZCiRMBAqQggQMzAEWMDAbGMAAMujda65LGTkSgGSBsfX1/89omt+177vcGVan9zuFfu+rYgM97l4Ay7JI13XylSPTNGkOfd+X+bZtus7geZ5nadtW96zrKqqAhRCC5JwVwDzGeADyzroCO1mA6BesE9CUUingvSkFUjLACja4Gx0VDJ88jQ5fol70G4ZhUL+2B/g4jv8ByCULwrEwASCbOUCfxcGCl00XYHjFPzYoBFAfutM5oBsqzIp9IQL2+VweJGT7pOlch3cJsAy83Np7Abz+md7+zh9zNVPvOTAUiAAAAABJRU5ErkJggg==" InformativeScreenshot="4272bbd22f0c46a533d90bcd394e74d8.jpg" Selector="&lt;html app='chrome.exe' title='Wikipedia' /&gt;" Title="Wikipedia" Url="https://www.wikipedia.org/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>

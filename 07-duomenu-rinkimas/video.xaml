@@ -1,0 +1,344 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="video" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="info" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_skaitliukas" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_url" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1139.2,3508.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>video_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Informacijos surinkimas iš YouTube" sap:VirtualizedContainerService.HintSize="654.4,3444" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="prenumeratoriai" />
+      <Variable x:TypeArguments="x:String" Name="perziuros" />
+      <Variable x:TypeArguments="x:String" Name="ikelimo_data" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:Int32" Name="perziuros_sk" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Paleidžiamas video įrašas" sap:VirtualizedContainerService.HintSize="592,3355.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="8253341b-1258-4872-990a-3b2dc99d596e" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Veiksmai, kuriais renkama informacija" sap:VirtualizedContainerService.HintSize="558.4,3075.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ClearDataTable sap2010:Annotation.AnnotationText="Kintamasis &quot;ExtractDataTable&quot; yra paruošiamas naujai iteracijai" DataTable="[ExtractDataTable]" DisplayName="Kintamojo &quot;ExtractDataTable&quot; išvalymas" sap:VirtualizedContainerService.HintSize="496,156.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ClearDataTable>
+            <If Condition="[in_skaitliukas=0]" DisplayName="Ar apdorojamas pirmas video įrašas?" sap:VirtualizedContainerService.HintSize="496,818.4" sap2010:WorkflowViewState.IdRef="If_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Taip" sap:VirtualizedContainerService.HintSize="416,324" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="1" DelayBetweenKeys="{x:Null}" DelayBetweenShortcuts="{x:Null}" DisplayName="Video įrašas nutildomas ir sustabdomas" sap:VirtualizedContainerService.HintSize="353.6,237.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="8253341b-1258-4872-990a-3b2dc99d596e" Shortcuts="[d(hk)]m[u(hk)][d(hk)]k[u(hk)]" ShortcutsArgument="{x:Null}" Timeout="{x:Null}" Version="V3">
+                    <uix:NKeyboardShortcuts.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NKeyboardShortcuts.VerifyOptions>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Ne" sap:VirtualizedContainerService.HintSize="416,324" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="2" DelayBetweenKeys="{x:Null}" DelayBetweenShortcuts="{x:Null}" DisplayName="Video įrašas sustabdomas" sap:VirtualizedContainerService.HintSize="353.6,237.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="8253341b-1258-4872-990a-3b2dc99d596e" Shortcuts="[d(hk)]k[u(hk)]" ShortcutsArgument="{x:Null}" Timeout="{x:Null}" Version="V3">
+                    <uix:NKeyboardShortcuts.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NKeyboardShortcuts.VerifyOptions>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ActivateBefore="True" AlterIfDisabled="{x:Null}" sap2010:Annotation.AnnotationText="Atidaroma išsami informacija apie video įrašą" ClickType="Single" ContinueOnError="True" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Spaudžiama &quot;more&quot;" sap:VirtualizedContainerService.HintSize="496,256.8" sap2010:WorkflowViewState.IdRef="NClick_4" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="8253341b-1258-4872-990a-3b2dc99d596e" Timeout="{x:Null}" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=hRK7PVJFbS8&amp;ab_channel=KendrickLamarVEVO" CVScreenId="52e3afbb-7fc4-487f-a93a-f9635aad6340" CvTextArea="603, 856, 94, 24" CvTextArgument="...more" CvType="Text" DesignTimeRectangle="590, 828, 55, 25" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='expand' tag='TP-YT-PAPER-BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='expand' tag='TP-YT-PAPER-BUTTON' type='' class='button style-scope ytd-text-inline-expander' aaname='...more' check:innerText='...more' /&gt;" Guid="8d3b8be2-9968-47df-b5a7-e59c4a63e0e5" ImageBase64="" InformativeScreenshot="06fbbeca03d2e020e63ce5abdac60289.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Kendrick Lamar - King Kunta - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nuskaitoma video įrašo įkėlimo data" sap:VirtualizedContainerService.HintSize="496,189.6" sap2010:WorkflowViewState.IdRef="NGetText_6" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="8253341b-1258-4872-990a-3b2dc99d596e" ScrapingOptions="{x:Null}" TextString="[ikelimo_data]" Timeout="30" Version="V3" WordsInfo="{x:Null}">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=CvBfHwUxHIk" CVScreenId="ad0c6819-c4cf-45fc-a3e6-31d862f4e018" CvTextArea="341, 506, 103, 16" CvType="AnyWordGroup" DesignTimeRectangle="343, 505, 102, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Dec 14, 2009' parentid='info' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='info' tag='SPAN' type='' class='style-scope yt-formatted-string bold' /&gt;" Guid="fcd40ed7-a627-4ca5-b834-00c786caf096" InformativeScreenshot="50295909eb2a3c6393cf35507486db3c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rihanna - Umbrella (Orange Version) (Official Music Video) ft. JAY-Z - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="283, 484, 54, 47" Guid="c0a94149-aa85-4280-90e1-1573a16412ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAvCAYAAAConDmOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAN3SURBVGhD7ZXNK61RFMbvf2BuYmZgpBNJDJQBEoqkKCEDpUgSZcbARxEDBiZiIgPJwIASnTIQUQYMJF8hH/k4/8C6/Vatt/ce7zlu10Db3aee9tlrrb3f/az17LV/yQ/9eWKu/X4usUQiIT8Rnphr8MRcgyfmGjwx1+CJuQZPzDV4Yq7BE3MNnphr8MRS4fn5WW5ubuTt7S3S/134ErHHx0fp6uqSjIwMWVlZiYz5LnyJ2Ovrq0xMTEh+fr5sbW1FxnwX/r87Fo/HJTs7W9ra2uT+/j6wU5nMzExpb2+X6+tr6ezsVCmGK/by8iLLy8tSWVmpvlgsJlNTU/Lw8KBVHhwc1D12dnaCNUg5WdL4ievt7dW7jPRnZmakpKREY4uKioJ9bY0hJTEaQkNDgxQWFsrR0VFgn5yc1E3n5ub0Q8nEOPj4+HhAqKqqSg/AvK+vT56enmRhYUHns7OzwRrIYmNkjn1+fl5txLOO9czr6upkaGhIqqurdd7d3a1nsTOClMTe39/1/rCQ7GOjclQwLy9PDg4OIolhx19fXy/n5+dqu7u703UoYHd3V/b29iQ3NzeoxOXlpdTU1Og+jMyx4yeO+OPjYykuLtZkk3T2teRbDDZD2jtmcrQDUDkqiAwpfxQxqsDcqmGw7DPe3t5KY2Oj1NbW6uFM3h0dHToyx47fYk5PT6W0tFS/v729/enzkpaYZaS8vFzOzs6Ce4AM8UcRQyLMUwG/Sc8yjbw59MbGho7MDw8PpaCgIJAmClpcXFTi7IPMe3p6UpJMS8zkyGabm5v6EZMh/nTEWltbZXR09ANWV1c1zpJEBZEphySR7Md8aWlJ/eFmwnlOTk5kbGxMysrK1A9Ym9xA0hIDJsf+/n7Vv8kQXxQxay4khIOE9wrDZE0jYKRBYGdk3tzcrBWjctj51tXVlY62B/JEqiQ+3GHBp8RMjpYdkyGIImaJoCXv7+8HsWR6eno6SIrdM9aGL781Fuz4icNuFR4YGNDnBBudkmr9E7Fwd0zuPlHE+CiSw5aVlSUVFRUK/ofJsu/w8PAHAmHC+K3qJLilpUXtTU1N+g2qCinm+IkzfEoMpHqso4gByK2trQUPdE5OjnZWqmYxYH19Xf3JsjU54w/HU20eZHsXaSAjIyNycXHxRxz4K2IuwhNzDZ6Ya/DEXIMn5hYS8huM+DOjT9v9OAAAAABJRU5ErkJggg==" SearchSteps="Image" TargetType="ImageBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nuskaitomas video įrašo peržiūrų skaičius" sap:VirtualizedContainerService.HintSize="496,189.6" sap2010:WorkflowViewState.IdRef="NGetText_7" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="8253341b-1258-4872-990a-3b2dc99d596e" ScrapingOptions="{x:Null}" TextString="[perziuros]" Timeout="{x:Null}" Version="V3" WordsInfo="{x:Null}">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=CvBfHwUxHIk" CVScreenId="f9ce4c3c-9ec5-4b02-97f5-dc20baf88bfc" CvTextArea="173, 506, 160, 18" CvType="AnyWordGroup" DesignTimeRectangle="174, 505, 160, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='info' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='info' tag='SPAN' type='' class='style-scope yt-formatted-string bold' /&gt;" Guid="9fe5a953-5049-473c-82e9-8776f16069c9" InformativeScreenshot="9105b18e1179c6c914756e534bee5ccf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rihanna - Umbrella (Orange Version) (Official Music Video) ft. JAY-Z - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                      <uix:Target CVScreenId="f9ce4c3c-9ec5-4b02-97f5-dc20baf88bfc" CvElementArea="153, 415, 59, 59" CvType="Icon" DesignTimeRectangle="159, 420, 50, 50" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='img' parentid='avatar' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='img' parentid='avatar' tag='IMG' type='' class='style-scope yt-img-shadow' aaname='' /&gt;" Guid="e95698e0-46e3-4571-8d01-61bd01de8752" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="f9ce4c3c-9ec5-4b02-97f5-dc20baf88bfc" CvElementArea="379, 420, 123, 51" CvTextArea="401, 436, 80, 17" CvTextArgument="Subscribe" CvType="Button" DesignTimeRectangle="383, 424, 118, 45" FullSelectorArgument="&lt;webctrl class='yt-spec-touch-feedback-shape__fill' parentid='subscribe-button-shape' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='yt-spec-touch-feedback-shape__fill' parentid='subscribe-button-shape' tag='DIV' type='' aaname='' /&gt;" Guid="20be1ebf-516c-4267-b266-141586e6b0ec" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap2010:Annotation.AnnotationText="Nuskaitant peržiūras yra įtraukiamas peržiūrų skaičius ir žodis &quot;views&quot;; šia veikla iš kintamojo pašalinamas žodis &quot;views&quot;" DisplayName="Gaunamas video įrašo peržiūrų skaičius" sap:VirtualizedContainerService.HintSize="496,158.4" sap2010:WorkflowViewState.IdRef="Assign_16">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[perziuros]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Left(perziuros.Trim,perziuros.Trim.LastIndexOf(" "))]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign DisplayName="Pakeičiamas peržiūrų skaičiaus formatas" sap:VirtualizedContainerService.HintSize="496,114.4" sap2010:WorkflowViewState.IdRef="Assign_17">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[perziuros_sk]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(perziuros.Replace(",", ""))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NGetText ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Nuskaitomas prenumeratorių skaičius" sap:VirtualizedContainerService.HintSize="496,189.6" sap2010:WorkflowViewState.IdRef="NGetText_8" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="8253341b-1258-4872-990a-3b2dc99d596e" ScrapingOptions="{x:Null}" TextString="[prenumeratoriai]" Timeout="{x:Null}" Version="V3" WordsInfo="{x:Null}">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=hRK7PVJFbS8&amp;ab_channel=KendrickLamarVEVO" DesignTimeRectangle="234, 584, 124, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='subtitle' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='subtitle' tag='DIV' type='' class='style-scope ytd-video-description-infocards-section-renderer' /&gt;" Guid="89dc4cb3-e50d-4020-a4b0-6ed159f92f34" InformativeScreenshot="9d013bafd8105a1223837078d162103d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='(1) Kendrick Lamar - King Kunta - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap2010:Annotation.AnnotationText="Nuskaitant prenumeratorius yra įtraukiamas prenumeratorių skaičius ir žodis &quot;subscribers&quot;; šia veikla iš kintamojo pašalinamas žodis &quot;subscribers&quot;" DisplayName="Gaunamas prenumeratorių skaičius" sap:VirtualizedContainerService.HintSize="496,158.4" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[prenumeratoriai]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Left(prenumeratoriai.Trim,prenumeratoriai.Trim.LastIndexOf(" "))]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenPages="{x:Null}" DisplayName="Nuskaitomas patiktukų skaičius" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='likes'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="496,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_3" InScope="{x:Null}" InUiElement="{x:Null}" LimitExtractionTo="Rows" MaximumResults="2" OutUiElement="{x:Null}" ScopeIdentifier="8253341b-1258-4872-990a-3b2dc99d596e" Timeout="{x:Null}" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=niqrrmev4mA" DesignTimeRectangle="159, 940, 1067, 243" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='above-the-fold' tag='DIV' /&gt;" Guid="417850bb-ea33-4b15-80c8-0df127f330f5" InformativeScreenshot="865c034218b1bd0483b59d18ceac6df6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lady Gaga - Alejandro (Official Music Video) - YouTube' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <Sequence DisplayName="Gauta informacija apie video įrašą ir atlikėją yra įrašoma į kintamąjį &quot;info&quot;" sap:VirtualizedContainerService.HintSize="496,565.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Įrašoma įkėlimo data" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_20">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[info.Rows(in_skaitliukas).Item(2)]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[ikelimo_data]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Įrašomas peržiūrų skaičius" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_21">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[info.Rows(in_skaitliukas).Item(3)]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[perziuros_sk]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Įrašomas prenumeratorių skaičius" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_22">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[info.Rows(in_skaitliukas).Item(4)]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[prenumeratoriai]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Įrašomas patiktukų skaičius" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Assign_23">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[info.Rows(in_skaitliukas).Item(5)]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Object">[ExtractDataTable.Rows(1).Item(0)]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACp0lEQVRYR8XXz0tUURQH8K8/8hZiYfmDmqgLuQhrE+1diLRxldAfEIQQBBJIIkHQKqpFG0FIEVsFQlGJRokEgqFgmo7m2GCvH8yEjDkkIaLl6XsfDoGc12g4rwufWZxz7j2H92OYgYj8V2owTGowTGowTFhdXfWt0Dda2JTe9J3kjzwq+It88mvXKXPGEmXOTdEPyvSFtRYROk6XrD3Tae3lfmvvxqztnrf26WdrBzesHRZr39AkzdI7hYtP0ziNrlg7xP0v6XHU2q4+a+/w7CtN1tactjbvMPu53v46CBQ/Abo3gF/+XcmxceDVSeCY37wQyBtgc60wl2LAUAlQhHPAWQZ+bi0Iw3mgFjeBJi0ZhnvAdTwE2rVkGHqBB3gNPNOSgcrLRVpbRUpL9fwOsPcA4sCwlgzkBlhfF4nHRRoa9Jpt+gSMg09jVEsGKisTSaX4Jba5enpEqqr02iySwJwbYE5LBto6gFvptEhzs0hRkb4nQAL4whEQ05KBtAEya2JCpL5e36f4CiTxYTeuQGa5K9HYqO9TLLgBduUWuNXRIRKJ6HsC8BYk3AAzWjLQ1gHGxkTq6vTaLDjAPN4DI1oykBtgbU1keVmkpUXEGL1uG/gWTGEM6NeSgSorRbq6RKqr9fwOsPcQeoBOLRkoP1+P/4NBsP1t4JqWDEM7cAsNQI2WDEMj2L4Y2DMJvNAKcolfQjNHAf4m4ToFRKb5QGiFucDXb7rWb8tljHEfqDCm8KoxFx4Z0zZiTF/CmJGkMbOLxnzkq5akFKVpOYslcrVJt9edwbNGeebzXmPu3zDm4gljSlxPv7fneb44vaUpilGCkp5XsOh5+8TzDtAhqqQjWVSQq93PvXvdGe4sd2aUXI85yvTlNdH/MIRFDYZJDYZJDYZH8BtrTS5QuubtDwAAAABJRU5ErkJggg==" InformativeScreenshot="5c3a5ae9e90b6e3d9d060bb6763c34b8.jpg" Selector="&lt;html app='chrome.exe' title='Kendrick Lamar - King Kunta - YouTube' /&gt;" Title="Naujas skirtukas" Url="[in_url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
