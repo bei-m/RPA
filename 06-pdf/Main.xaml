@@ -1,0 +1,432 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1139.2,5678.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="704,5613.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="tekstas" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New DataTable]" Name="informacija" />
+      <Variable x:TypeArguments="x:String" Name="nr" />
+      <Variable x:TypeArguments="x:String" Name="data" />
+      <Variable x:TypeArguments="x:String" Name="tarpine_suma" />
+      <Variable x:TypeArguments="x:String" Name="moketinas_likutis" />
+      <Variable x:TypeArguments="x:String" Name="siuntejas" />
+      <Variable x:TypeArguments="x:String" Name="gavimo_data" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="migle.beigaite@mif.stud.vu.lt" DisplayName="Use Outlook 365" EmailAddress="migle.beigaite@mif.stud.vu.lt" sap:VirtualizedContainerService.HintSize="641.6,5524.8" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_3" UseConnectionService="False">
+      <umab:ExchangeApplicationCard.ApplicationId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:ExchangeApplicationCard.ApplicationId>
+      <umab:ExchangeApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="elpastas" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,5276.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="545.6,861.6" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[elpastas.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="1" UnreadOnly="True" WithAttachmentsOnly="True">
+              <umab:ForEachEmailX.Body>
+                <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="dabartinis" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,566.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[siuntejas]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[dabartinis.sender.address.ToString()]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[gavimo_data]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[dabartinis.date.ToString()]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="C:\Users\Mokytojas\Documents\UiPath\6lab\failai" sap:VirtualizedContainerService.HintSize="433.6,252.8" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[dabartinis]" OverwriteExisting="False" />
+                  </Sequence>
+                </ActivityAction>
+              </umab:ForEachEmailX.Body>
+              <umab:ForEachEmailX.MailFilter>
+                <umabf:MailFilterArgument LogicalOperator="And">
+                  <umabf:MailFilterArgument.Filters>
+                    <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
+                      <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="From" DateFilter="SevenDays" Operator="Contains" Value="laurita" />
+                    </scg:List>
+                  </umabf:MailFilterArgument.Filters>
+                </umabf:MailFilterArgument>
+              </umab:ForEachEmailX.MailFilter>
+            </umab:ForEachEmailX>
+            <ui:BuildDataTable DataTable="[informacija]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="545.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Sąskaitos_x0020_faktūros_x0020_Nr.&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Data&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Tarpinė_x0020_suma&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mokėtinas_x0020_likutis&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.pdf" Folder="C:\Users\Mokytojas\Documents\UiPath\6lab\failai" sap:VirtualizedContainerService.HintSize="545.6,1997.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+              <ui:ForEachFileX.Body>
+                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="failas" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1703.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Atidaromas pdf failas" sap:VirtualizedContainerService.HintSize="449.6,1616.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="f587ec97-c84b-4672-b445-106934e57c75" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1302.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Padaroma, kad matytųsi visas failas" sap:VirtualizedContainerService.HintSize="353.6,246.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="f587ec97-c84b-4672-b445-106934e57c75" Shortcuts="[d(hk)][d(ctrl)][k(num0)][u(ctrl)][u(hk)]" Version="V3">
+                              <uix:NKeyboardShortcuts.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NKeyboardShortcuts.VerifyOptions>
+                            </uix:NKeyboardShortcuts>
+                            <uix:NGetText DisplayName="Gaunamas Sąskaitos faktūros nr.  (Get Text)" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="f587ec97-c84b-4672-b445-106934e57c75" TextString="[nr]" Version="V3">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="1286, 251, 27, 10" CvType="AnyWordGroup" DesignTimeRectangle="1288, 254, 26, 7" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='8' role='row' /&gt;&lt;ctrl name='156140  ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="2a6928cf-d512-4933-8ec2-5e9fe62088d8" InformativeScreenshot="152cff48cb1232b23fa7ffe89ec5919e.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='saskaita_156140.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="1143, 251, 90, 11" CvTextArgument="Saptaitos faktoroe nr." CvType="Text" DesignTimeRectangle="1146, 254, 88, 8" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='8' role='row' /&gt;&lt;ctrl name='Sąskaitos faktūros nr.  ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Sąskaitos faktūros nr.  ' role='text' automationid='' check:text='Sąskaitos faktūros nr.' /&gt;" Guid="83d25845-ecbd-4394-8062-c803466d2d76" SearchSteps="Selector, FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                            <uix:NGetText DisplayName="Gaunama data  (Get Text)" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="f587ec97-c84b-4672-b445-106934e57c75" TextString="[data]" Version="V3">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="1285, 233, 42, 8" CvType="AnyWordGroup" DesignTimeRectangle="1288, 236, 40, 8" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='7' role='row' /&gt;&lt;ctrl name='2023-04-14  ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="96a8ad39-1fb0-47b4-bb96-f98fd567c543" InformativeScreenshot="5ac2d79f65f3c6f14d2c5a782f69be0a.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='saskaita_156140.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="1143, 233, 22, 8" CvTextArgument="Dafta" CvType="Text" DesignTimeRectangle="1146, 236, 21, 8" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='7' role='row' /&gt;&lt;ctrl name='Data:  ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Data:  ' role='text' automationid='' check:text='Data:' /&gt;" Guid="dabe81b5-138d-4e6b-a21f-88552c90e795" SearchSteps="Selector, FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                            <uix:NGetText DisplayName="Gaunama tarpinė suma  (Get Text)" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="f587ec97-c84b-4672-b445-106934e57c75" TextString="[tarpine_suma]" Version="V3">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="1232, 727, 48, 8" CvType="AnyWordGroup" DesignTimeRectangle="1149, 731, 133, 7" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='27' role='row' /&gt;&lt;ctrl name='1 458.61 EUR   ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="48016e11-49e6-4179-94c9-e21b77fd2c67" InformativeScreenshot="d3c3776f73cc8c1d278ef265b6e93779.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='saskaita_156140.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="846, 727, 50, 10" CvTextArgument="Tarpine suma" CvType="Text" DesignTimeRectangle="848, 731, 48, 7" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='27' role='row' /&gt;&lt;ctrl name='Tarpinė suma  ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Tarpinė suma  ' role='text' automationid='' check:text='Tarpinė suma' /&gt;" Guid="003b7012-2746-4c61-afb9-16af101ac66d" SearchSteps="Selector, FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                            <uix:NGetText DisplayName="Gaunamas mokėtinas likutis (Get Text)" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="f587ec97-c84b-4672-b445-106934e57c75" TextString="[moketinas_likutis]" Version="V3">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="1233, 812, 48, 8" CvType="AnyWordGroup" DesignTimeRectangle="1148, 815, 134, 8" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='31' role='row' /&gt;&lt;ctrl name='409.36 EUR   ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="201ad3e7-3f83-4ee5-b6ae-247c8bb912f8" InformativeScreenshot="e61620a41b15bd917bcc09eae1d25a87.png" ScopeSelectorArgument="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='saskaita_156140.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="a1df9a4b-48b6-4eed-81a6-4e7bdff5cb05" CvTextArea="1045, 811, 69, 10" CvTextArgument="Moaetnas mutte" CvType="Text" DesignTimeRectangle="1047, 815, 71, 8" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='31' role='row' /&gt;&lt;ctrl name='Mokėtinas likutis   ' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Mokėtinas likutis   ' role='text' automationid='' check:text='Mokėtinas likutis' /&gt;" Guid="aa756d38-2591-4ac2-a7aa-7f1c7033f73c" SearchSteps="Selector, FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{nr, data, tarpine_suma, moketinas_likutis}]" DataTable="[informacija]" DisplayName="Įrašoma į duomenų lentelę" sap:VirtualizedContainerService.HintSize="353.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="[failas.ToString()]" FilePath="C:\Program Files\Adobe\Acrobat DC\Acrobat\acrobat.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUJSURBVFhH5Zh/TFZVGMdBSyxTjPghFeW0cpq0LF1SEZUx0kLWgpptTocmIAjjh0grxtogGDCGMn4M3pZikRosm9WIaghhq/FD1GACawVCvCAMkHvvOZf3fb90zkXbet/zmuC92dYfnz/u7nOf57NzzznPuddlenraBYADNpvNMET1nCEWtFpdrUcqNqlLXE4zphjQgVFGvrWixM9msTjWdIJQ0FJ6aCNLZlaXe4C8FgJlbySUuN1zJ2qHjQT4U+rlJrO8JktRwTL7ms4QCrIk36o+d0LZHweppwvSlSuQJGnujI3ZpKYGVXkvZYouv0dl+Y9b3n/nhiSdCVK6fhWks63ignPFbIaSlgDVY75F9VxwypKR9o+SzgRBN20UF9EBJf5tUHdXC6tTbTmY522zWh0crnFLBDnK/n2g3nfwBfih1VSyki1MBw/OLROU+i+B7NkO6rWQz8mTbCR97D04+giOjUE+8QnIvl2Q674Sx9gzOQmp4wKUiFegurvybajA3oOjjyBb6SRiM8jLgSCvviCOEcEk5eNHoT68jAtK9h4cXQTl72pBt4VB/uwYVL+lUE5/L4wTcqkP9Nl12mZu78HRZwR/qAd9nY1g3C6o9y2GUv2pOM4JvJaxgmzC07CXQFf7gXcfeZb7p/GCDCXjANjmC7phNaTRUWGMM/4dQbavqR63gW4JEt6/HsYL9lwEDX6adYd5oA96QPmGbTWz6N/GCjIRudIEdYUXSOA6ELaaaTB7trEe0sVOSBfOQfrlPKS+XqfSxgr2/s6OU9uhLp0HEr8HSnoqVN9FIGxEyY43QHa/BRK5DQrrGnLNMUiXhx1yGCfIR++LatCHfLQCfBXTzc9pwiT0RdCV3iAxOyEfOwoa+ARo0JPCFW6M4Pl2KDvfBPVzh+q1AEpyrNa6tFc5ZIb0268g2Rmga5g0e/3U0w00JBAyj7HLpa/gyGUoB/NAVt0L8tSjWh8lEVtm5psonlPPOstPP0Ia/EN4Xz/B8XHIZUUzPTc/C+SZx0EfWwH5y5OOsbNAN0F5aAgkKRYkLBiEzSey5gHIR0yauH3sbNB1BKWvT4EkREFhohLf7yYmHONmiX6CHC7E5qE0OsKOSzf5MXUVfQUN4P8pWFFRgZycHFRWVqK7uxs1NTXadXl5OVpaWtDb2wuTyYTs7GwUFhaip6dHmIdjiGBISAgKCgqQlpaG/Px8REZGIikpCSUlJYiKikJVVRW2bt2qyR0+fFgTFuXhGCIYHByMhoYG1NbWIi4uDuHh4SgtLcXg4CBSU1ORmJiI0NBQ9PX1YYItrEn+kSTIwzFMMCsrCykpKcjLy9NGsKysDMPDw0hPT0dsbKwmGBQUhIiICPT39wvzcAwT5FLFxcXo6upCTEwMioqK0N7ejujoaGRmZmqCTU1N6OjoEOa4hmGCjY2Nf13Hx8drI5WcnIzc3FzU1dUhLCwMAwMDf3tOhCGCzc3NMJvZqeXqdWdnJ86cOYPW1lZNamRkBG1tbRi/gTY4N8HnN8x0DEFCXenpBg3wn7XgKH3EF/LHH0EaYJP7Zv8PiuA52blR/vwEVP65usRl3N6D40wwlp3zptS1y0H2RkIuLoRcUaIvpQehHEgACVgL9e75/C/Xu/YeHKGgpezQQtXL7QN6/5JhPvSG4nuXWfW8PZ/VdLf34AgF+b86a1vzIuu5s/7Wlp/XG0p721pWa/F1/w/+d5l2+ROBiPgPwy36dgAAAABJRU5ErkJggg==" InformativeScreenshot="20fa3d264480bfdbd87a53dd1baafe4f.png" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='saskaita_156140.pdf - Adobe Acrobat Reader (64-bit)' /&gt;" Title="saskaita_156140.pdf - Adobe Acrobat Reader (64-bit)" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachFileX.Body>
+            </ui:ForEachFileX>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[informacija]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="545.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="PDF informacija" WorkbookPath="rezultatas.xlsx" />
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[NAppCloseMode.IfOpenedByAppBrowser]" DisplayName="Use Application: rezultatas - Excel" sap:VirtualizedContainerService.HintSize="545.6,1552" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="a36954d0-d7cc-4f24-ac64-4665592bf5f0" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1228.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Format as Table'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a36954d0-d7cc-4f24-ac64-4665592bf5f0" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="82ce4386-0872-4d66-8e09-651605705198" CvElementArea="1120, 117, 44, 40" CvType="Icon" DesignTimeRectangle="1118, 115, 48, 44" DesignTimeScaleFactor="1.25" ElementType="Icon" Guid="580d759b-e3c7-45d9-b93c-f2cc0b1be8e3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAsCAYAAAAjFjtnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPFSURBVGhD7VhrSFNhGO6vRPSjy59AiCCoiH4EEYJUVBIZFQRFzX6U6LQL0lap1VyQUFMiml2giyRWkPXH4czK1UxnjSwN01qXBaWVXbCCisR443l3tk7H75xNdzkWe+Bhx+/9Ls/znfe7eMbQP46kAb2RNKA3/l8DNTWXyGjMjYjZmzeRYcN6YUxE1EUbUUxEaFGDqoFjxypo9eqVZLcfDcs9xUW0bu0aYUxE1EUbUUxJaIAWNWgagPuBgYGwbPW0UHHhTmFMRNRFG1FMSWhIGgjHpAENJg2IOlUyngYslr3kdrslVUMxqg0MDg5KatShaWDZsgweLBxXFJTRmOzamDF19w2qbX/DOvr6+shqtdDSpYvJYFjPZXJoGsCJiZkKR8s5Fw+85kx3RETd9MNtwljOBR91vP7KGpzOOsrIWMLCcailpc3ncjlikkKVt1+yqAM3P0bEoFll+fkH/dLogfEhGMIxBn5Nph1S9A9GjQG5+JKSfTzzLpeL++/t7eUUEi3mUWEgKB75npW1gcXfvXsn1D9mPi/PyHWU0N2AUjzyvaurK9S3w1HLqdTWdo/rKaGrAbl4CAeRLsF+8Yy3AS1q0M2A8eITHkdNPJibm8PlWtA0EK9tdG5pC48hTxuleOw6WLg+n4/rqkHTQDwOskjEB/Me5wDg//CNf0VIaArJt0qz2cT/bSnFY/eR5/2Jple0+3IXP4uQMAOifV6+VYIwgzeCOPD5xy+abmmi/OqH/LcICTFwyhu5eBDpBVQ9+EJTdrn0M4BZv9/znfq/B26VuJSJxIO4NsvFX+n8yn3oYsDW9Im63/2QegqgrMzGu4qaeBgLHlY3X3wL9ZVwA3LxVZ5XNK24kWPgnL31XFfeVku8LgacjwNXYXujn8tmWJtD+z+eUXbk2jNupxT/5P3Pv8RHbSDSD1vmgydZ2PLjHdwW+/bYLU6ad8g7RBDKJhbUc77Lxdsa/DTf5uW4nOO2XR2ZgeF8WtxaaKXZVjdVenq4bdbp+zR+e8MQ8aDJ0cNmF2w0hxaso+MtzSq5pcrSOvXTWNXASAExEJh5slNoAES84uojqUV0iKkBzFRKfh3NKW0VCgexFmDA8/yT1Co6RGUAC3Xj2XZaWH6HJhQ0sDDkrUg4iPSZbLpOmUe9Ug/RI+o3ADEQjsWWU+MXCgcN1U9Z/NSiRs3L2XARkxTCZQu7Tkq+k2bub6Yl9vbQ1omvD6mFget2uq0lpuKBmK0BCMMaWFTuoUk7AukEYsZXVXh5cccDMV3EeiBpQG/84waIfgOCu1nm85lL3wAAAABJRU5ErkJggg==" InformativeScreenshot="2e54f9673925d78425cd7caf8e0b6103.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='rezultatas - Excel' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="1107, 111, 70, 96" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Home' /&gt;&lt;uia cls='NetUIChunk' name='Styles' /&gt;&lt;uia automationid='FormatAsTableGallery' cls='NetUIAnchor' name='Format as Table' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Home' /&gt;&lt;uia cls='NetUIChunk' name='Styles' /&gt;&lt;uia automationid='FormatAsTableGallery' cls='NetUIAnchor' name='Format as Table' role='Menu Item' check:fulltext='Format as Table' /&gt;" Guid="b6cb3b3e-0191-483f-86c1-b56fe0746011" SearchSteps="Selector, FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="353.6,262.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(Right)][u(hk)][d(hk)][k(Right)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3">
+                      <uix:NKeyboardShortcuts.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NKeyboardShortcuts.VerifyOptions>
+                    </uix:NKeyboardShortcuts>
+                    <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'My table has headers'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="a36954d0-d7cc-4f24-ac64-4665592bf5f0" Version="V3">
+                      <uix:NCheck.Target>
+                        <uix:TargetAnchorable CVScreenId="7ae4d759-24db-4209-a7cd-8c3ca8ce57da" CvElementArea="15, 96, 17, 17" CvTextArea="38, 98, 126, 18" CvTextArgument="My table has headers" CvType="CheckBox" DesignTimeRectangle="16, 97, 153, 21" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;uia cls='NetUICheckbox' name='My table has headers' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUICheckbox' name='My table has headers' role='CheckBox' automationid='' check:fulltext='My table has headers' /&gt;" Guid="d9a396f8-9d22-49f2-abb9-2694b2341806" InformativeScreenshot="71cad69e6c16c3f253884beec9c60225.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='NUIDialog' title='Create Table' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CVScreenId="7ae4d759-24db-4209-a7cd-8c3ca8ce57da" CvTextArea="38, 98, 126, 16" CvTextArgument="My table has headers" CvType="Text" DesignTimeRectangle="38, 98, 126, 18" ElementType="Text" Guid="7128f2b0-c5ee-46f2-90f7-6adb35879eae" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NCheck.Target>
+                    </uix:NCheck>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a36954d0-d7cc-4f24-ac64-4665592bf5f0" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="7ae4d759-24db-4209-a7cd-8c3ca8ce57da" CvElementArea="78, 121, 87, 29" CvTextArea="113, 130, 18, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="79, 122, 88, 30" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;uia cls='NetUIButton' name='OK' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUIButton' name='OK' role='Button' automationid='' check:fulltext='OK' /&gt;" Guid="230a654c-4bc1-4ed2-b6de-a5683a16e4ba" InformativeScreenshot="96dd32153cbb029ae2dd22a756e91483.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='NUIDialog' title='Create Table' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="353.6,239.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V3">
+                      <uix:NKeyboardShortcuts.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NKeyboardShortcuts.VerifyOptions>
+                    </uix:NKeyboardShortcuts>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="c:\users\mokytojas\documents\uipath\6lab\rezultatas.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQdSURBVFhH7dhLTFRXHMdxMLWRODN35sIw4EIeLmyqUWEERECeUgSKgBhta7tpqbysCsqz5SnPjQsFDbHWYknVmKDR+GxtGklXXViWbZOWRcVVbeLC5a//c+5rZrgzXOlxFqQn+SYMBP6fnHvuWRCxUlYktSrMWV6RSVO1N5Muf4rl5J3tW16Pe2+o85dcUWaDrWY63GI0+w2FEHpJZoOtZjbYajTbphBCL6fZYKuZDbYazZYVQuj1PzBYNHuFABO//Bghu6iU9HUtkqYEA+PHqmbiR6sQP1qJuJG9SsMV8LCG3uXFDpYrnSqD+1Qp3AOsPYjpZ5Ugpu8dRFOekQoFOkVQYUAOU3GE8sctAetXYNG9xdRuyD27IR3PgrMjF87P83m+u/mqcaD5rqmwwTI/XAzH+cD6GKyYw+SeIri6iyAdy4LUugvOrjxBQD9YqMfJYCUqTNk1X5iruxCuLwrgaMqE1JINZ6cgoGd4MeyjawMY+3Ga+gZ5k40KToV13juH0R+m0Hl3QsUpMCeLQI6GDEjNIoGB54zKn2yCtmb//EXfsQ+v9KrfBTrujBNMxRHE2cXKg71eMDDYOfv2yQOVAlRcOsEf5/zzZ/zz7B9PVJiGy4NEIKkzVzzQ/5ypZ412LHm0Gv+8fKGDGmfG+Nds5YzX6jAGYTCJ3lypfRfsdemCgQEw3xeAnTNtadiJn64rML5rBozXliMeyGFBr41CzC38zmFszT9fQMJAuf44dRzBHK3UyWzYDwsGmsOMt5OhtMV2cX1/mR9MYrDWbI5znMiCXLMNsTWpiHs/HXGHMpSjsMwUoA4zdk27NkYeXdJh2iOe/vkuwbRdM2COlp08uWarWKAZjP0w5+wnHMTW8Hdfof3WGfUTUHr+iAFTcfbmTNiPZ0LeJxjIYRrO59qYe/obx8z/vYD1vaV8x9jXbM399auxa82EI5j92A6eeGAAjL0A7beN3aq/NqSfs7qrg+p3gaH7F/Rd47ijGbB/li4eyD8EXBvscQ4/vMjzP2dZHDZ07wLaZk77wWxHqKY0yNVbBAN977MO4z7Trg2zc2bAKA5TcLbG7eKBwe4zx0kDFnjOAneNwWwNVL0XrioC7hcJDHKf6TCTc7YI1uDF2vpUrK1LgVy2STCwLWcm8JwFe5w6TMd5adcYjDqcAtvBzYgu3UxArw78L3GgheV0pCUgdImQMpPhKtgId8VWeA5sR9wHYQTKhW8hZEVU8duIKafzty8VnvfSTAe+ajTbGtC9dxuCVqlWnUJvrxeeg4QTsHssmm0NyIYuGe2ah507QTgWzbYGNPvlcESzVwZQMvvlcESzLQGj6F57ZPYHXmc083ua7VAIoddqKplKp3aEKTZrA/UmteRi/+FfQ7mpeGrda47NiKWiIiIiIv8FG3Tl5OYvmvIAAAAASUVORK5CYII=" InformativeScreenshot="c40cc3cd07113f9fb12aa30dc0332f62.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='rezultatas - Excel' /&gt;" Title="rezultatas - Excel" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <ui:ReadTextFile File="{x:Null}" Content="[tekstas]" DisplayName="Read Text File" FileName="failai\laiskas.txt" sap:VirtualizedContainerService.HintSize="545.6,112.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[elpastas]" Body="[String.Format(tekstas, siuntejas, gavimo_data, &quot;rezultatas.xlsx&quot;)]" BodyType="Text" DisplayName="Siunčiamas laiškas" sap:VirtualizedContainerService.HintSize="545.6,426.4" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Laiškas" To="[siuntejas]" UseDocumentAsBody="False">
+              <umab:SendMailX.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                  <InArgument x:TypeArguments="x:String">rezultatas.xlsx</InArgument>
+                </scg:List>
+              </umab:SendMailX.Files>
+              <umab:SendMailX.HtmlBodyFromFile>
+                <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="&lt;HTML&gt;&lt;HEAD&gt;&#xD;&#xA;&lt;STYLE type=text/css&gt;&#xD;&#xA;        body {&#xD;&#xA;            font-family: Calibri;&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        p {&#xD;&#xA;            margin: 0;&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        .mapping {&#xD;&#xA;            background-color: #D3D4D7;&#xD;&#xA;            color: black;&#xD;&#xA;            padding: 1px;&#xD;&#xA;        }&#xD;&#xA;    &lt;/STYLE&gt;&#xD;&#xA;&lt;!-- Instruct the web browser control to use IE 6 to render the page. --&gt;&#xD;&#xA;&lt;META content=IE=6 http-equiv=X-UA-Compatible&gt;&lt;/HEAD&gt;&#xD;&#xA;&lt;BODY&gt;&lt;FONT color=#0000ff&gt;&#xD;&#xA;&lt;P&gt;String&lt;/FONT&gt;.Format(tekstas, &lt;FONT color=#800000&gt;&quot;Lauritos&quot;&lt;/FONT&gt;, Now.ToString, &lt;FONT color=#800000&gt;&quot;rezultatas.xlsx&quot;&lt;/FONT&gt;)&lt;/P&gt;&lt;/BODY&gt;&lt;/HTML&gt;">
+                  <umabh:HtmlContentArgument.RuntimeImages>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </umabh:HtmlContentArgument.RuntimeImages>
+                  <umabh:HtmlContentArgument.ValueMappings>
+                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                  </umabh:HtmlContentArgument.ValueMappings>
+                </umabh:HtmlContentArgument>
+              </umab:SendMailX.HtmlBodyFromFile>
+            </umab:SendMailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:ExchangeApplicationCard.Body>
+      <umab:ExchangeApplicationCard.TenantId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:ExchangeApplicationCard.TenantId>
+    </umab:ExchangeApplicationCard>
+  </Sequence>
+</Activity>
